@@ -3,63 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cambio de Contraseña</title>
+    <title>Cambio de Contraseña - Skandia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Colores de Skandia */
+        .bg-skandia-green { background-color: #007a33; }
+        .hover\:bg-skandia-green-dark:hover { background-color: #005f29; }
+        .text-skandia-green { color: #007a33; }
+        .border-skandia-green { border-color: #007a33; }
+        .ring-skandia-green:focus {
+            --tw-ring-color: #007a33;
+        }
+    </style>
 </head>
-<body style="margin: 0; padding: 0; width: 100%; background-color: #f6f6f6; font-family: Arial, sans-serif;">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #f6f6f6;">
-        <tr>
-            <td align="center" valign="top">
-                <table border="0" cellpadding="0" cellspacing="0" width="600" style="background-color: #ffffff; border: 1px solid #dddddd; margin-top: 20px;">
-                    <tr>
-                        <td align="center" valign="top">
-                            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #222222; color: #ffffff;">
-                                <tr>
-                                    <td align="center" style="padding: 20px;">
-                                        <h1 style="margin: 0; font-size: 28px; font-weight: bold;">G-Demo</h1>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="center" valign="top">
-                            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #fff8f0;">
-                                <tr>
-                                    <td align="left" style="padding: 30px 40px; font-size: 16px; line-height: 1.6; color: #333333;">
-                                        <h2 style="margin-top: 0; color: #d9531e;">Restablece tu Contraseña</h2>
-                                        <p style="margin-bottom: 25px;">Hola Antonio,</p>
-                                        <p style="margin-bottom: 25px;">En el siguiente link podrás hacer tu cambio de contraseña, recuerda seguir las políticas de la compañía por favor.</p>
-                                        <table border="0" cellspacing="0" cellpadding="0" align="left">
-                                            <tr>
-                                                <td align="center" style="background-color: #ff6600;">
-                                                    <a href="file:///Users/cleyva/Documents/password-test-cagl/TEST%20PASSWORD.html" style="font-size: 16px; font-family: Arial, sans-serif; color: #ffffff; text-decoration: none; padding: 15px 25px; border: 1px solid #ff6600; display: inline-block; font-weight: bold;">Cambiar Contraseña</a>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                        <p style="clear: both; margin-top: 80px;">Si no solicitaste este cambio, puedes ignorar este correo de forma segura.</p>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="center" valign="top">
-                            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #eeeeee;">
-                                <tr>
-                                    <td align="center" style="padding: 20px 30px; font-size: 12px; color: #777777; line-height: 1.5;">
-                                        <p style="margin: 0;">
-                                            Este correo es una demo que solo muestra el funcionamiento de restablecimiento de contraseña usando Genesys Cloud, los resultados pueden variar según la configuración final.
-                                        </p>
-                                        <p style="margin: 10px 0 0 0;">&copy; 2024 G-Demo. Todos los derechos reservados.</p>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+    <div class="w-full max-w-md mx-auto p-4">
+        <div id="form-container" class="bg-white rounded-2xl shadow-xl p-8 md:p-10 transition-all duration-500">
+            <!-- Encabezado con Logo -->
+            <div class="text-center mb-8">
+                <img src="https://www.skandia.com.mx/mercadeo/2020/campanas/conecta_fps/img/logotipo-Skandia.jpg" alt="Logo Skandia" class="mx-auto h-12 mb-4" onerror="this.onerror=null;this.src='https://placehold.co/200x50/007a33/FFFFFF?text=Skandia';">
+                <h1 class="text-2xl font-bold text-gray-800">Restablecer Contraseña</h1>
+                <p class="text-gray-500 mt-2">Crea una nueva contraseña segura.</p>
+            </div>
+
+            <!-- Formulario -->
+            <form id="password-change-form" class="space-y-6">
+                <div>
+                    <label for="new-password" class="text-sm font-medium text-gray-700">Nueva Contraseña</label>
+                    <input type="password" id="new-password" name="new-password" required class="mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-skandia-green focus:border-skandia-green transition">
+                </div>
+                <div>
+                    <label for="confirm-password" class="text-sm font-medium text-gray-700">Confirmar Nueva Contraseña</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required class="mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-skandia-green focus:border-skandia-green transition">
+                </div>
+
+                <!-- Mensaje de Error -->
+                <div id="error-message" class="hidden text-red-600 text-sm text-center bg-red-100 p-3 rounded-lg">
+                    Las contraseñas no coinciden. Inténtalo de nuevo.
+                </div>
+
+                <!-- Botón de envío -->
+                <div>
+                    <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-lg text-base font-semibold text-white bg-skandia-green hover:bg-skandia-green-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-skandia-green transition-transform transform hover:scale-105">
+                        Cambiar Contraseña
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Mensaje de Éxito -->
+        <div id="success-message" class="hidden bg-white rounded-2xl shadow-xl p-8 md:p-10 text-center transition-all duration-500">
+             <div class="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-green-100 mb-6">
+                <svg class="h-10 w-10 text-skandia-green" fill="none" viewBox="0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+            </div>
+            <h2 class="text-2xl font-bold text-gray-800">¡Éxito!</h2>
+            <p class="text-gray-600 mt-2">Tu contraseña ha sido actualizada correctamente.</p>
+            <p class="text-gray-500 text-sm mt-4">Ahora puedes iniciar sesión con tu nueva contraseña.</p>
+        </div>
+    </div>
+
+    <script>
+        // --- Lógica del Formulario ---
+        const form = document.getElementById('password-change-form');
+        const formContainer = document.getElementById('form-container');
+        const successMessage = document.getElementById('success-message');
+        const errorMessage = document.getElementById('error-message');
+        const newPasswordInput = document.getElementById('new-password');
+        const confirmPasswordInput = document.getElementById('confirm-password');
+
+        form.addEventListener('submit', function(event) {
+            // Prevenir el envío real del formulario
+            event.preventDefault();
+
+            // Ocultar mensaje de error previo
+            errorMessage.classList.add('hidden');
+
+            // Simulación de validación: verificar que las contraseñas coincidan
+            if (newPasswordInput.value !== confirmPasswordInput.value) {
+                errorMessage.classList.remove('hidden');
+                // Añadir un pequeño efecto de vibración para el error
+                formContainer.classList.add('animate-shake');
+                setTimeout(() => formContainer.classList.remove('animate-shake'), 500);
+                return; // Detener la ejecución si no coinciden
+            }
+            
+            // Ocultar el formulario y mostrar el mensaje de éxito con una animación
+            formContainer.style.opacity = '0';
+            formContainer.style.transform = 'scale(0.95)';
+            
+            setTimeout(() => {
+                formContainer.classList.add('hidden');
+                successMessage.classList.remove('hidden');
+                successMessage.style.opacity = '0';
+                successMessage.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    successMessage.style.opacity = '1';
+                    successMessage.style.transform = 'scale(1)';
+                }, 50); // Pequeño delay para que la animación de entrada se vea
+            }, 500); // Esperar a que la animación de salida del formulario termine
+        });
+
+        // Añadir una clase de animación para el efecto de vibración
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @keyframes shake {
+                0%, 100% { transform: translateX(0); }
+                10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+                20%, 40%, 60%, 80% { transform: translateX(5px); }
+            }
+            .animate-shake {
+                animation: shake 0.5s ease-in-out;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
 </body>
 </html>
-
