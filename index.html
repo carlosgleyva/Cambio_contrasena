@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cambio de Contraseña - Skandia</title>
+    <title>Cambio de Contraseña - Sí Vale</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
         }
-        /* Colores de Skandia */
-        .bg-skandia-green { background-color: #007a33; }
-        .hover\:bg-skandia-green-dark:hover { background-color: #005f29; }
-        .text-skandia-green { color: #007a33; }
-        .border-skandia-green { border-color: #007a33; }
-        .ring-skandia-green:focus {
-            --tw-ring-color: #007a33;
+        /* Colores de Sí Vale */
+        .bg-sivale-red { background-color: #e30613; }
+        .hover\:bg-sivale-red-dark:hover { background-color: #c00411; }
+        .text-sivale-red { color: #e30613; }
+        .border-sivale-red { border-color: #e30613; }
+        .ring-sivale-red:focus {
+            --tw-ring-color: #e30613;
         }
     </style>
 </head>
@@ -26,7 +26,7 @@
         <div id="form-container" class="bg-white rounded-2xl shadow-xl p-8 md:p-10 transition-all duration-500">
             <!-- Encabezado con Logo -->
             <div class="text-center mb-8">
-                <img src="https://www.skandia.com.mx/mercadeo/2020/campanas/conecta_fps/img/logotipo-Skandia.jpg" alt="Logo Skandia" class="mx-auto h-12 mb-4" onerror="this.onerror=null;this.src='https://placehold.co/200x50/007a33/FFFFFF?text=Skandia';">
+                <img src="https://us-east-1.graphassets.com/AhiTLfTgQg6aq6zPgJZ6fz/ICaTD6YGQSo2F74mj6Y7" alt="Logo Si Vale" class="mx-auto h-12 mb-4" onerror="this.onerror=null;this.src='https://placehold.co/200x50/e30613/FFFFFF?text=S%C3%AD+Vale';">
                 <h1 class="text-2xl font-bold text-gray-800">Restablecer Contraseña</h1>
                 <p class="text-gray-500 mt-2">Crea una nueva contraseña segura.</p>
             </div>
@@ -35,11 +35,11 @@
             <form id="password-change-form" class="space-y-6">
                 <div>
                     <label for="new-password" class="text-sm font-medium text-gray-700">Nueva Contraseña</label>
-                    <input type="password" id="new-password" name="new-password" required class="mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-skandia-green focus:border-skandia-green transition">
+                    <input type="password" id="new-password" name="new-password" required class="mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-sivale-red focus:border-sivale-red transition">
                 </div>
                 <div>
                     <label for="confirm-password" class="text-sm font-medium text-gray-700">Confirmar Nueva Contraseña</label>
-                    <input type="password" id="confirm-password" name="confirm-password" required class="mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-skandia-green focus:border-skandia-green transition">
+                    <input type="password" id="confirm-password" name="confirm-password" required class="mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-sivale-red focus:border-sivale-red transition">
                 </div>
 
                 <!-- Mensaje de Error -->
@@ -49,7 +49,7 @@
 
                 <!-- Botón de envío -->
                 <div>
-                    <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-lg text-base font-semibold text-white bg-skandia-green hover:bg-skandia-green-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-skandia-green transition-transform transform hover:scale-105">
+                    <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-lg text-base font-semibold text-white bg-sivale-red hover:bg-sivale-red-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sivale-red transition-transform transform hover:scale-105">
                         Cambiar Contraseña
                     </button>
                 </div>
@@ -59,7 +59,7 @@
         <!-- Mensaje de Éxito -->
         <div id="success-message" class="hidden bg-white rounded-2xl shadow-xl p-8 md:p-10 text-center transition-all duration-500">
              <div class="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-green-100 mb-6">
-                <svg class="h-10 w-10 text-skandia-green" fill="none" viewBox="0 24 24" stroke="currentColor">
+                <svg class="h-10 w-10 text-sivale-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
             </div>
@@ -126,3 +126,5 @@
     </script>
 </body>
 </html>
+
+
